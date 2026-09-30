@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHC-Twin — Demo Video Recording Script</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background: #f8fafc;
+      margin: 0;
+      padding: 24px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 36px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    h1 { color: #0f172a; margin-top: 0; font-size: 26px; }
+    h2 { color: #1e40af; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-top: 32px; font-size: 18px; }
+    .badge {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .section-card {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 24px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+    .spoken-box {
+      background: #0f172a;
+      color: #f8fafc;
+      border-left: 5px solid #3b82f6;
+      padding: 18px;
+      border-radius: 8px;
+      font-size: 15px;
+      line-height: 1.65;
+      font-weight: 500;
+    }
+    .action-box {
+      background: #f1f5f9;
+      border-left: 5px solid #10b981;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      margin-bottom: 14px;
+      color: #0f172a;
+    }
+    .action-box strong { color: #047857; }
+    .footer-note {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 12px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Google Cloud Hackathon: Build with AI</div>
+    <h1>🏥 PHC-Twin — Demo Video Recording Script</h1>
+    <p><strong>Target Duration:</strong> 3 mins 30 secs – 4 mins 15 secs | <strong>Local URL:</strong> <code>http://localhost:3000</code></p>
+
+    <!-- Part 1 -->
+    <div class="section-card">
+      <h2>PART 1: THE CORE THESIS (00:00 – 00:45)</h2>
+      <div class="meta-grid">
+        <div><strong>Screen:</strong> <code>http://localhost:3000/</code> (Homepage)</div>
+        <div><strong>Timing:</strong> 45 Seconds</div>
+      </div>
+      <div class="action-box">
+        <strong>What to do on screen:</strong><br>
+        1. Start at hero title.<br>
+        2. Scroll down to side-by-side comparison card: <em>Traditional Dashboard</em> vs <em>PHC-Twin</em>.<br>
+        3. Circle mouse around "Trained Diagnostic Technician: Unavailable".
+      </div>
+      <div class="spoken-box">
+        "Hello judges! Across India’s network of over 150,000 Primary Health Centres and Ayushman Bharat Health and Wellness Centres, public health dashboards track <strong>Resource Availability</strong> — counting physical machines, beds, and drug boxes.<br><br>
+        However, <strong>Resource Availability does NOT equal Healthcare Capability</strong>.<br><br>
+        A rural PHC might possess a brand-new automated blood analyzer and full electricity, but if the <strong>single certified lab technician is absent</strong>, clinical diagnostic testing is <strong>0% capable</strong>.<br><br>
+        Traditional dashboards show green; community patients arrive, get turned away, and preventable health emergencies escalate.<br><br>
+        We built <strong>PHC-Twin</strong> — an AI-powered healthcare capability intelligence platform that models clinical dependencies, isolates single points of failure, and orchestrates decentralized inter-facility staff and supply redeployments across India's real highway networks."
+      </div>
+    </div>
+
+    <!-- Part 2 -->
+    <div class="section-card">
+      <h2>PART 2: GEOGRAPHIC HIGHWAY TWIN (00:45 – 01:30)</h2>
+      <div class="meta-grid">
+        <div><strong>Screen:</strong> <code>http://localhost:3000/phcs</code> (PHC Network)</div>
+        <div><strong>Timing:</strong> 45 Seconds</div>
+      </div>
+      <div class="action-box">
+        <strong>What to do on screen:</strong><br>
+        1. Click "PHC Network" in navbar.<br>
+        2. Ensure "District Roadmap" view is active.<br>
+        3. Click blue NH-30 line to show transit popup (5.2 km, ~18 mins).<br>
+        4. Point to Green (Capable), Yellow (Limited buffer), and Blue Star (Sitapur Urban Donor Hub).
+      </div>
+      <div class="spoken-box">
+        "Let’s look at our live geographic twin of Sitapur district in Uttar Pradesh, built on real <strong>OpenStreetMap</strong> tile layers and national highway geometry.<br><br>
+        Instead of viewing facilities as isolated data silos, PHC-Twin maps physical transit connectivity along <strong>National Highway NH-30</strong> and <strong>State Highway SH-26</strong>.<br><br>
+        Our dynamic markers instantly reflect clinical readiness: green for fully capable facilities, yellow for low medicine buffer warnings, and blue stars representing regional donor hubs like <strong>Sitapur Urban Community Health Centre</strong> with verified surplus personnel.<br><br>
+        Clicking any highway corridor calculates real-world transit latencies, road surface quality, and inter-facility driving times."
+      </div>
+    </div>
+
+    <!-- Part 3 -->
+    <div class="section-card">
+      <h2>PART 3: SIMULATING A DEPENDENCY OUTAGE (01:30 – 02:15)</h2>
+      <div class="meta-grid">
+        <div><strong>Screen:</strong> <code>http://localhost:3000/phcs/phc-rampur</code> (PHC Rampur)</div>
+        <div><strong>Timing:</strong> 45 Seconds</div>
+      </div>
+      <div class="action-box">
+        <strong>What to do on screen:</strong><br>
+        1. Click on "PHC Rampur".<br>
+        2. In stress-test bar, click <strong>Simulate Tech Absence</strong>.<br>
+        3. Click "Diagnostic & Lab Services" tab.<br>
+        4. Show Dependency Graph: Analyzer Functional (✓), Power (✓), Reagents (✓), Technician 0 (❌).
+      </div>
+      <div class="spoken-box">
+        "Let's inspect <strong>PHC Rampur</strong>. Right now, it's 100% operational. But let’s simulate a daily rural reality: the certified laboratory technician is on sudden emergency leave.<br><br>
+        Watch what happens instantly in zero milliseconds: physical hardware and electricity remain 100% functional, yet our deterministic capability engine immediately drops Diagnostic Care to <strong>0% UNAVAILABLE</strong>.<br><br>
+        The system evaluates the multi-tier dependency tree: because sample handling requires certified personnel, the physical machines are halted. 28 daily community patient tests are now blocked."
+      </div>
+    </div>
+
+    <!-- Part 4 -->
+    <div class="section-card">
+      <h2>PART 4: MULTIMODAL REGISTER VISION & MULTILINGUAL VOICE (02:15 – 03:00)</h2>
+      <div class="meta-grid">
+        <div><strong>Screen:</strong> <code>http://localhost:3000/phcs/phc-rampur</code> (Scroll down)</div>
+        <div><strong>Timing:</strong> 45 Seconds</div>
+      </div>
+      <div class="action-box">
+        <strong>What to do on screen:</strong><br>
+        1. In Voice Dispatch bar, select "हिंदी (Hindi)" and click <strong>🔊 Listen Broadcast</strong>.<br>
+        2. Scroll to "Gemini 1.5 Flash Vision • Paper Stock Register Scanner".<br>
+        3. Click <strong>Scan Physical Paper Ledger</strong>.<br>
+        4. Show extracted discrepancy table (Phantom Inventory: 0 vials).<br>
+        5. Click <strong>⚡ Synchronize & Correct Digital Twin</strong>.
+      </div>
+      <div class="spoken-box">
+        "To ensure linguistic inclusivity across India’s diverse states, our voice engine broadcasts emergency alerts aloud in <strong>Hindi, Marathi, Tamil, Bengali, and English</strong>.<br><br>
+        Furthermore, we address a critical rural ground reality: over 65% of rural Indian PHCs still use physical paper stock registers. Often, district databases show medicines available while physical shelves are empty — what we call <strong>Phantom Inventory</strong>.<br><br>
+        We integrated <strong>Google Gemini 1.5 Flash Multimodal Vision</strong>. With one click, it audits handwritten rural HMIS Form 5A registers, extracts physical reagent counts, detects the zero-stock discrepancy, and synchronizes the digital twin in real time."
+      </div>
+    </div>
+
+    <!-- Part 5 -->
+    <div class="section-card">
+      <h2>PART 5: GEMINI REASONING & CLOSED-LOOP RECOVERY (03:00 – 03:45)</h2>
+      <div class="meta-grid">
+        <div><strong>Screen:</strong> Bottom of <code>http://localhost:3000/phcs/phc-rampur</code></div>
+        <div><strong>Timing:</strong> 45 Seconds</div>
+      </div>
+      <div class="action-box">
+        <strong>What to do on screen:</strong><br>
+        1. Show the Gemini Decision Intelligence card & donor safety note.<br>
+        2. Click <strong>Approve Dispatch</strong> (CMO Gate).<br>
+        3. Click pulsating blue button <strong>🚀 Execute Live Simulation</strong>.<br>
+        4. Point to top diagnostic badge turning 🟢 100% AVAILABLE and the green Recovery Toast (+28 patients protected).
+      </div>
+      <div class="spoken-box">
+        "Now, how do we solve the outage?<br><br>
+        Instead of turning patients away, <strong>Google Gemini 1.5 Flash</strong> evaluates the surrounding facility cluster. It identifies <strong>Sitapur Urban CHC</strong>, located just 5.2 km away on NH-30, which has 3 technicians on duty.<br><br>
+        Crucially, Gemini enforces an algorithmic <strong>Donor Safety Margin</strong> — verifying that dispatching 1 technician leaves Sitapur Urban with 2 technicians, safely above its own local patient threshold.<br><br>
+        Gemini formats a structured order for the Chief Medical Officer. The CMO clicks <strong>Approve Dispatch</strong>, and executes live deployment.<br><br>
+        Instantly, the technician is reassigned via the NH-30 corridor, Rampur’s diagnostic service returns to <strong>100% AVAILABLE</strong>, and <strong>28 daily community patients are protected</strong>."
+      </div>
+    </div>
+
+    <!-- Part 6 -->
+    <div class="section-card">
+      <h2>PART 6: FORECASTING, ARCHITECTURE & CONCLUSION (03:45 – 04:15)</h2>
+      <div class="meta-grid">
+        <div><strong>Screen:</strong> <code>http://localhost:3000/alerts</code> &rarr; <code>http://localhost:3000/architecture</code></div>
+        <div><strong>Timing:</strong> 30 Seconds</div>
+      </div>
+      <div class="action-box">
+        <strong>What to do on screen:</strong><br>
+        1. Click "Alerts" in navbar &rarr; show 7-day stockout warnings.<br>
+        2. Click "Architecture" in navbar &rarr; show BRICS federated learning blueprint.<br>
+        3. Conclude on camera or hero page.
+      </div>
+      <div class="spoken-box">
+        "Beyond acute outages, PHC-Twin includes a <strong>7-Day Demand Forecasting Engine</strong> that analyzes rolling consumption to alert administrators of stockouts 5 days before they happen.<br><br>
+        Built on Next.js 14, Leaflet, and Google Cloud AI, PHC-Twin is ready for pilot deployment across state health ministries, with a federated architecture designed for BRICS health resilience.<br><br>
+        By shifting the paradigm from <strong>Resource Availability to Healthcare Capability</strong>, PHC-Twin ensures that every primary health centre can truly deliver the care its community needs.<br><br>
+        Thank you!"
+      </div>
+    </div>
+
+    <div class="footer-note">
+      PHC-Twin &bull; Google Cloud Hackathon: Build with AI — Code for Communities &bull; <a href="https://github.com/Allan-nishad/PHC-Twin">GitHub Repository</a>
+    </div>
+  </div>
+</body>
+</html>
