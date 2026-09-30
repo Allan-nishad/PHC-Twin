@@ -8,6 +8,8 @@ import { StatusBadge } from '@/components/status-badge';
 import { DependencyGraph } from '@/components/dependency-graph';
 import { AIDecisionCard } from '@/components/ai-decision-card';
 import { MapWrapper } from '@/components/map-wrapper';
+import { VoiceAlertBroadcaster } from '@/components/voice-alert-broadcaster';
+import { MultimodalRegisterScanner } from '@/components/multimodal-register-scanner';
 import { findNearbyCapablePHCs } from '@/lib/calculations';
 import { generateInterventionsForPHC } from '@/lib/intervention-engine';
 import { ServiceId } from '@/lib/types';
@@ -23,6 +25,8 @@ import {
   ChevronDown,
   ChevronUp,
   Route,
+  Camera,
+  Volume2,
 } from 'lucide-react';
 
 export default function PHCDetailPage() {
@@ -40,6 +44,7 @@ export default function PHCDetailPage() {
   const [selectedServiceId, setSelectedServiceId] = useState<ServiceId>('diagnostics');
   const [showRawResources, setShowRawResources] = useState<boolean>(false);
   const [showMap, setShowMap] = useState<boolean>(true);
+  const [showScanner, setShowScanner] = useState<boolean>(true);
 
   const selectedCapability = phc.capabilities?.[selectedServiceId] || phc.capabilities?.diagnostics;
   const nearbyCapable = findNearbyCapablePHCs(phc, phcs, selectedServiceId, 60);
@@ -141,6 +146,13 @@ export default function PHCDetailPage() {
         </div>
       </div>
 
+      {/* Multilingual Voice Broadcast Bar (Voice & Language Track) */}
+      <VoiceAlertBroadcaster
+        alertTextEnglish={`Emergency capability alert at ${phc.name}. Diagnostic testing offline.`}
+        facilityName={phc.name}
+        district={phc.district}
+      />
+
       {/* 2. SECOND: 5 Service Capabilities */}
       <div className="space-y-3">
         <div className="text-xs font-bold uppercase tracking-wider text-slate-500 font-mono">
@@ -204,6 +216,26 @@ export default function PHCDetailPage() {
           existingIntervention={primaryIntervention}
         />
       )}
+
+      {/* 5. Vision AI: Multimodal Paper Register Scanner (Vision & Multimodal Track) */}
+      <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+        <button
+          onClick={() => setShowScanner(!showScanner)}
+          className="w-full p-4 text-left flex items-center justify-between text-xs font-semibold text-slate-800 hover:bg-slate-50 transition-colors"
+        >
+          <div className="flex items-center gap-2">
+            <Camera className="w-4 h-4 text-indigo-600" />
+            <span>Gemini 1.5 Flash Vision &bull; Paper Stock Register Scanner (HMIS Form 5A)</span>
+          </div>
+          {showScanner ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+        </button>
+
+        {showScanner && (
+          <div className="p-3 bg-slate-950 border-t border-slate-200">
+            <MultimodalRegisterScanner facilityName={phc.name} facilityId={phc.id} />
+          </div>
+        )}
+      </div>
 
       {/* 5. Geographic Roadmap & Transit Corridors */}
       <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">

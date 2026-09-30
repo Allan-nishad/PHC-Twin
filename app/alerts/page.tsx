@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePHC } from '@/components/phc-context';
+import { VoiceAlertBroadcaster } from '@/components/voice-alert-broadcaster';
 import { AlertTriangle, Package, Activity, Info, Clock, ArrowRight } from 'lucide-react';
 
 export default function AlertsPage() {
@@ -36,6 +37,13 @@ export default function AlertsPage() {
           </select>
         </div>
       </div>
+
+      {/* Multilingual Voice Broadcast Bar */}
+      <VoiceAlertBroadcaster
+        alertTextEnglish="National Health Mission Emergency Capability Dispatch Feed"
+        facilityName="District Health Network"
+        district="Sitapur"
+      />
 
       {/* Alerts Feed */}
       <div className="space-y-3">
